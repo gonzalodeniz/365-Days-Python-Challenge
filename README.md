@@ -20,7 +20,10 @@ La idea para completar este desafío es solucionar en python los típicos proble
 en universidades y ciclos superiores de programación. También probaré librerías conocidas o no, problemas curiosos 
 encontrados en internet o que se me ocurran.
 
-## Lenguaje tipado (MyPy)
+### Version Python
+En el momento de comenzar este proyecto la versión de python que se utiliza es: **Python 3.11.3**
+
+### Lenguaje tipado (MyPy)
 Python es un lenguaje dinámico y de ahí que sea tan rápido codificar. Sin embargo, este dinamismo 
 tiene un gran problema y es la alta posibilidad de errores en tiempo de ejecución. La librería MyPy
 permite validar de forma estática los tipos de nuestros programas escritos en Python.
@@ -47,7 +50,7 @@ Referencias:
 * https://towardsdatascience.com/introduction-to-mypy-3d32fc96db75
 
 
-## Test
+### Test
 Cada problema tendrá sus test para comprobar la correcta solución de los problemas. 
 Se ha utilizado la librería PyTest.
 
