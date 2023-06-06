@@ -17,17 +17,59 @@ de programación y conocimientos en el lenguaje.
 ## Contenido del proyecto
 
 La idea para completar este desafío es solucionar en python los típicos problemas de algoritmos que se dan
-en universidades y ciclos superiores de programación. También buscaré probar librerías no conocidas u otros problemas
+en universidades y ciclos superiores de programación. También probaré librerías conocidas o no, problemas curiosos 
 encontrados en internet o que se me ocurran.
+
+## Lenguaje tipado (MyPy)
+Python es un lenguaje dinámico y de ahí que sea tan rápido codificar. Sin embargo, este dinamismo 
+tiene un gran problema y es la alta posibilidad de errores en tiempo de ejecución. La librería MyPy
+permite validar de forma estática los tipos de nuestros programas escritos en Python.
+
+Todos los proyectos se van a codificar utilizando MyPy, es decir, definiendo el tipo de variable y 
+posteriormente comprobando si hay errores. La forma de usarlo es:
+
+Instalación de la librería:
+
+```
+pip install mypy
+```
+
+Comprobar el tipado es tan sencillo como:
+
+```
+mypy .                  validar todos los ficheros de nuestro proyecto.
+mypy my_directory       validar todos los fichero python dentro de un directorio.
+mypy my_file.py         validar un fichero python en concreto.
+```
+
+Referencias:
+* https://www.pmareke.com/posts/python-mypy/
+* https://towardsdatascience.com/introduction-to-mypy-3d32fc96db75
+
+
+## Test
+Cada problema tendrá sus test para comprobar la correcta solución de los problemas. 
+Se ha utilizado la librería PyTest.
+
+Instalación de la librería:
+
+```
+pip install pytest
+```
+
+Comprobar el tipado es tan sencillo como:
+
+```
+pytest .                  Test todos los ficheros de test nuestro proyecto..
+pytest my_directory       Test todos los fichero de test python dentro de un directorio.
+pytest my_file.py         Test un fichero en concreto.
+```
+
 
 ## Seguimiento del proyecto
 
 Cada problema que solucione se subirá al repositorio: https://github.com/gonzalodeniz/365-Days-Python-Challenge. 
 Posiblembente lo publique también en twitter y linkedin.
-
-En cuanto a la rigurosidad de programar los 365 días basta decir desde ya que no me lo tomaré al pie de la letra. 
-Ya bastante tengo con el día a día como para preocuparme de programar o subir algo un día. Pero no importa, menos
-es no hacer nada.
 
 ¡Vamos allá!
 
