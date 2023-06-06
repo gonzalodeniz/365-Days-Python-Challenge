@@ -16,9 +16,9 @@ de programación y conocimientos en el lenguaje.
 
 ## Contenido del proyecto
 
-La idea para completar este desafío es solucionar en python los típicos problemas de algoritmos que se dan
-en universidades y ciclos superiores de programación. También probaré librerías conocidas o no, problemas curiosos 
-encontrados en internet o que se me ocurran.
+La idea para completar este desafío es empezar solucionando los típicos problemas de algoritmos que se dan
+en universidades y ciclos superiores de programación. Cuando no encuentre más ejercicios  probaré librerías conocidas
+o no tan conocidas, y cuando ya no sepa que realizar me inventaré frikadas.
 
 ### Version Python
 En el momento de comenzar este proyecto la versión de python que se utiliza es: **Python 3.11.3**
