@@ -11,7 +11,6 @@ COLUMNA_APEL2: int = 2
 
 def equinombre(fullname: str) -> str:
 
-
     fullname_list: list[str] = fullname.split()
     cont_palabras: int = len(fullname_list)
     output: str = ''
