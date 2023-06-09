@@ -1,4 +1,4 @@
-# 004 Intercambio de variables
+# 002 Producto Escalar
 Desarrolle un procedimiento que intercambie los valores de dos variables enteras pasadas como parámetros. 
 A continuación escriba un algooritmo que lea tres valores enteros en tres variables enteras x,y,z, y 
 los ordene de forma que en x quede el mayor valor, en y el intermedio, y en z el menor, mostrando 
