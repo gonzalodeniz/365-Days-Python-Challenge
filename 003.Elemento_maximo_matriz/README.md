@@ -1,4 +1,4 @@
-# 002 Elemento máximo de una matriz
+# 003 Elemento máximo de una matriz
 Desarrolle un procedimiento para obtener el elemento máximo de una matriz de ristras y su posición.
 
 ## Fuente del problema
