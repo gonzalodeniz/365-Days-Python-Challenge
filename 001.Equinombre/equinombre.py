@@ -4,38 +4,40 @@ Dada una variable ristra la cual representa el nombre y los dos apellidos de una
 del nombre y primer apellido.
 """
 
-COLUMNA_NOMBRE: int = 0
-COLUMNA_APEL1: int = 1
-COLUMNA_APEL2: int = 2
+NOMBRE_COL: int = 0
+PRIMER_APELLIDO_COL: int = 1
+SEGUNDO_APELLIDO_COL: int = 2
 
 
 def equinombre(fullname: str) -> str:
+    """Función para obtener un nombre equivalente, en la forma de segundo apellido seguido de las iniciales
+    del nombre y primer apellido.
+    """
+    nombres_separados: list[str] = fullname.split()
+    cont_palabras: int = len(nombres_separados)
 
-    fullname_list: list[str] = fullname.split()
-    cont_palabras: int = len(fullname_list)
-    output: str = ''
     if cont_palabras >= 3:
-        output = _equinombre_nombre_2apellidos(fullname_list)
+        return _nombre_con_dos_apellidos(nombres_separados)
 
     if cont_palabras == 2:
-        output = _equinombre_nombre_1apellidos(fullname_list)
+        return _nombre_con_un_apellido(nombres_separados)
 
     if cont_palabras == 1:
-        output = _equinombre_nombre(fullname_list)
+        return _nombre_sin_apellidos(nombres_separados)
 
-    return output
-
-
-def _equinombre_nombre_2apellidos(lista_nombre_apellidos: list[str]) -> str:
-    return lista_nombre_apellidos[COLUMNA_APEL2] + lista_nombre_apellidos[COLUMNA_NOMBRE][0] + lista_nombre_apellidos[COLUMNA_APEL1][0]
+    return ''
 
 
-def _equinombre_nombre_1apellidos(lista_nombre_apellido: list[str]) -> str:
-    return lista_nombre_apellido[COLUMNA_APEL1] + lista_nombre_apellido[COLUMNA_NOMBRE][0]
+def _nombre_con_dos_apellidos(nombre_apellidos: list[str]) -> str:
+    return nombre_apellidos[SEGUNDO_APELLIDO_COL] + nombre_apellidos[NOMBRE_COL][0] + nombre_apellidos[PRIMER_APELLIDO_COL][0]
 
 
-def _equinombre_nombre(lista_nombre: list[str]) -> str:
-    return lista_nombre[COLUMNA_NOMBRE]
+def _nombre_con_un_apellido(nombre_apellido: list[str]) -> str:
+    return nombre_apellido[PRIMER_APELLIDO_COL] + nombre_apellido[NOMBRE_COL][0]
+
+
+def _nombre_sin_apellidos(nombre: list[str]) -> str:
+    return nombre[NOMBRE_COL]
 
 
 def main() -> None:
