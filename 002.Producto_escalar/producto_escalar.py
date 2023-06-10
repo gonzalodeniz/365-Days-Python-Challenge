@@ -8,10 +8,8 @@ Precondición: El número de componente de los dos vectores deben ser iguales
 """
 
 def producto_escalar(u: tuple[int, ...], v:  tuple[int, ...]) -> int:
-    num_componente_u: int = len(u)
-    num_componente_v: int = len(v)
 
-    if not _valida_componentes(num_componente_u, num_componente_v):
+    if not _son_componentes_iguales(u, v):
         raise ValueError("El número de componente debe ser iguales en los dos vectores")
 
     suma_componentes: int = 0
@@ -21,8 +19,8 @@ def producto_escalar(u: tuple[int, ...], v:  tuple[int, ...]) -> int:
     return suma_componentes
 
 
-def _valida_componentes(num_componente_u: int, num_componente_v: int) -> bool:
-    return num_componente_u == num_componente_v
+def _son_componentes_iguales(u: tuple[int, ...], v:  tuple[int, ...]) -> bool:
+    return len(u) == len(v)
 
 def main() -> None:
     u: tuple[int, ...] = (3, 0, 0)
