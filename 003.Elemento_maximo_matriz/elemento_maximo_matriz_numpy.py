@@ -9,16 +9,16 @@ from numpy import ndarray
 from typing import Any
 
 
-def elemento_maximo_matriz(matriz: list[list[int]]) -> dict[str, Any]:
+def buscar_maximo_y_posicion(matriz: list[list[int]]) -> dict[str, Any]:
 
     maximo: int
-    posicion: tuple[int, int]
+    posicion_maximo: tuple[int, int]
 
     maximo = _valor_maximo(matriz)
-    posicion = _posicion_valor_maximo(matriz, maximo)
+    posicion_maximo = _posicion_valor_maximo(matriz, maximo)
 
     return {'maximo': maximo,
-            'posicion': posicion}
+            'posicion': posicion_maximo}
 
 
 def _valor_maximo(matriz: list[list[int]]) -> int:
@@ -46,7 +46,7 @@ def main() -> None:
         [7, 8, 5]
     ]
 
-    resultado = elemento_maximo_matriz(matriz)
+    resultado = buscar_maximo_y_posicion(matriz)
     print(str(resultado))
 
 
