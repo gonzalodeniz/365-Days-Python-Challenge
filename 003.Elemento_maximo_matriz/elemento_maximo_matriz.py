@@ -3,7 +3,7 @@ Desarrolle un procedimiento para obtener el elemento máximo de una matriz de ri
 """
 
 
-def elemento_maximo_matriz(matriz: list[list[int]]) -> dict[str, int | tuple[int, int]]:
+def buscar_maximo_y_posicion(matriz: list[list[int]]) -> dict[str, int | tuple[int, int]]:
 
     maximo: int = matriz[0][0]
     posicion: tuple[int, int] = (0, 0)
@@ -25,7 +25,7 @@ def main() -> None:
         [7, 8, 5]
     ]
 
-    resultado: dict[str, int | tuple[int, int]] = elemento_maximo_matriz(matriz)
+    resultado: dict[str, int | tuple[int, int]] = buscar_maximo_y_posicion(matriz)
     print(str(resultado))
 
 
