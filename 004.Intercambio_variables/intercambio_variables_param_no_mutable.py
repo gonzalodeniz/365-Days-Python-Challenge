@@ -9,6 +9,8 @@ y en z el menor, mostrando el resultado en la salida estandar.
 
 import random
 
+MIN = 1
+MAX = 10
 
 def intercambio(x: int, y: int) -> tuple[int, int]:
     """ Intercambie los valores de dos variables enteras pasados como parámetros.
@@ -40,13 +42,10 @@ def intercambio(x: int, y: int) -> tuple[int, int]:
     assert isinstance(x, int), "La variable no es entera"
     assert isinstance(y, int), "La variable no es entera"
 
-    aux = x
-    x = y
-    y = aux
-    return x, y
+    return y, x
 
 
-def ordena(x: int, y: int, z: int) -> tuple[int, int, int]:
+def ordena(x: int, y: int, z: int) -> tuple[int, ...]:
     """ Algoritmo que lee tres valores enteros en tres variables
         enteras x,y,z, y los ordene de forma que en x quede el mayor valor,
         en y el intermedio, y en z el menor """
@@ -55,38 +54,10 @@ def ordena(x: int, y: int, z: int) -> tuple[int, int, int]:
     assert isinstance(y, int), "La variable no es entera"
     assert isinstance(z, int), "La variable no es entera"
 
-    # Menor
-    if z < y:
-        menor = z
-        medio = y
-    else:
-        menor = y
-        medio = z
-
-    # Mayor
-    if x > medio:
-        mayor = x
-    else:
-        # X no es el mayor
-        mayor = medio
-        if x > menor:
-            medio = x
-        # X es el mas chico
-        else:
-            medio = menor
-            menor = x
-
-    x = mayor
-    y = medio
-    z = menor
-
-    return x, y, z
+    return tuple(sorted((x, y, z), reverse=True))
 
 
 def main():
-
-    MIN = 1
-    MAX = 10
 
     # Utilizando parametros no mutables
     print('Utilizando parámetros no mutables')
