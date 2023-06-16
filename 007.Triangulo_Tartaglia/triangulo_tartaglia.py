@@ -10,10 +10,15 @@ Triángulo de Tartaglia
 1331
 14641
 """
-from typing import Any
+
+def coeficiente_binomial(m: int, n: int) -> int:
+
+    triangulo: list[list[int]]
+    triangulo = crea_triangulo_tartaglia(m+1)
+    return triangulo[m][n]
 
 
-def triangulo_tartaglia(numero_de_filas: int) -> list[list[int]]:
+def crea_triangulo_tartaglia(numero_de_filas: int) -> list[list[int]]:
     triangulo: list[list[int]]
 
     triangulo = []
@@ -40,12 +45,10 @@ def calcula_fila_siguiente(fila: list[int]) -> list[int]:
         return siguiente_fila
 
 
-def coeficiente_binomial(m:int, n:int) -> int:
-    return 0
 
 def main():
-    triangulo = triangulo_tartaglia(4)
-    print(str(triangulo))
+    resultado = coeficiente_binomial(0, 0)
+    print(resultado)
 
 
 if __name__ == "__main__":
