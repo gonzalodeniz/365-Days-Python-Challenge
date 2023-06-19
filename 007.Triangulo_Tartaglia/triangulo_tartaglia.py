@@ -47,7 +47,7 @@ def calcula_fila_siguiente(fila: list[int]) -> list[int]:
 
 
 def main():
-    resultado = coeficiente_binomial(0, 0)
+    resultado = coeficiente_binomial(4, 2)
     print(resultado)
 
 
