@@ -1,7 +1,7 @@
 from intercambio_variables_param_mutable import *
 
 
-def test_intercambio_dict():
+def test_intercambio_dict() -> None:
     # Prueba con números positivos
     v = {'x': 5, 'y': 3}
     intercambio(v)
@@ -28,7 +28,7 @@ def test_intercambio_dict():
     assert v == {'x': 3, 'y': 3}
 
 
-def test_ordena_dict():
+def test_ordena_dict() -> None:
     # Prueba con números positivos
     v = {'x': 5, 'y': 3, 'z': 7}
     ordena(v)

@@ -56,7 +56,7 @@ def _columnas(matriz: list[list[int]]) -> int:
         return 0
 
 
-def main():
+def main() -> None:
     m = [[1,2,3],[4, 5, 6]]
     traspuesta_matriz(m)
     print(str(m))

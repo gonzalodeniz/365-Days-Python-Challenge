@@ -56,16 +56,13 @@ def ordena(x: int, y: int, z: int) -> tuple[int, int, int]:
     assert isinstance(y, int), "La variable no es entera"
     assert isinstance(z, int), "La variable no es entera"
 
-    vector: ndarray
-    vector_ordenado: ndarray
-
     vector = np.array([x, y, z])
     vector_ordenado = np.sort(vector)[::-1]
 
     return vector_ordenado[0], vector_ordenado[1], vector_ordenado[2]
 
 
-def main():
+def main() -> None:
     MIN = 1
     MAX = 10
 

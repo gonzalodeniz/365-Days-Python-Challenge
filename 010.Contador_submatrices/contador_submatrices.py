@@ -29,7 +29,7 @@ class Matriz:
                 self.m[x].append(valor)
 
     @classmethod
-    def de_listas(cls, matriz_lists: list[list[Any]]):
+    def de_listas(cls, matriz_lists: list[list[Any]]) -> 'Matriz':
         """ Devuelve una instancia con la matriz de listas [[],[]] que se ha pasado por parámetros. """
 
         assert isinstance(matriz_lists, list) and \

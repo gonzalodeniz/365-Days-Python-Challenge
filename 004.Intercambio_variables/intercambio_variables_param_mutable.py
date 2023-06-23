@@ -74,7 +74,7 @@ def ordena(v: dict[str, int]) -> None:
     v['z'] = menor
 
 
-def main():
+def main() -> None:
     MIN = 1
     MAX = 10
 

@@ -1,10 +1,11 @@
 import pytest
 from traspuesta_matriz_numpy import *
+from typing import Any
 
 
-def test_traspuesta_matriz():
+def test_traspuesta_matriz() -> None:
     # Caso de prueba 1: Matriz vacía
-    matriz = []
+    matriz: list[list[Any]] = []
     traspuesta_matriz(matriz)
     assert matriz == []
 

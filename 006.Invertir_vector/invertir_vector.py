@@ -13,7 +13,7 @@ def invertir_vector(vector: list[Any]) -> list[Any]:
     return vector_inverso
 
 
-def main():
+def main() -> None:
     vector: list[Any]
     vector = [1, 2, 3, 4, 5]
     vector_invertido = invertir_vector(vector)

@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 import pytest
 from invertir_vector import *
+from typing import Any
 
 
-def test_invertir_vector():
+def test_invertir_vector() -> None:
     # Caso de prueba 1: Vector vacío
-    vector = []
+    vector: list[Any] = []
     vector_invertido = invertir_vector(vector)
     assert vector_invertido == []
 

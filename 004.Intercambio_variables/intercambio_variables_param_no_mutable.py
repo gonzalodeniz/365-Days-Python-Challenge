@@ -57,7 +57,7 @@ def ordena(x: int, y: int, z: int) -> tuple[int, ...]:
     return tuple(sorted((x, y, z), reverse=True))
 
 
-def main():
+def main() -> None:
 
     # Utilizando parametros no mutables
     print('Utilizando parámetros no mutables')

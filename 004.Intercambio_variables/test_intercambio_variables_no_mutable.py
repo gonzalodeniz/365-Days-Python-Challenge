@@ -2,7 +2,7 @@ import pytest
 from intercambio_variables_param_no_mutable import intercambio, ordena
 
 
-def test_intercambio():
+def test_intercambio() -> None:
     # Prueba con números positivos
     assert intercambio(5, 3) == (3, 5)
 
@@ -20,9 +20,9 @@ def test_intercambio():
 
     with pytest.raises(AssertionError):
         # Prueba con no enteros
-        intercambio(5.5, 3)
+        intercambio(5.5, 3)     # type: ignore
 
-def test_ordena():
+def test_ordena() -> None:
     # Prueba con números positivos
     assert ordena(5, 3, 7) == (7, 5, 3)
 
@@ -40,4 +40,4 @@ def test_ordena():
 
     with pytest.raises(AssertionError):
         # Prueba con no enteros
-        ordena(5.5, 3, 7)
+        ordena(5.5, 3, 7)       # type: ignore

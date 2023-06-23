@@ -1,20 +1,20 @@
 import pytest
 
 from triangulo_tartaglia import *
-def test_calcula_fila_siguiente():
+def test_calcula_fila_siguiente() -> None:
     assert calcula_fila_siguiente([1]) == [1, 1]
     assert calcula_fila_siguiente([1, 1]) == [1, 2, 1]
     assert calcula_fila_siguiente([1, 2, 1]) == [1, 3, 3, 1]
     assert calcula_fila_siguiente([1, 3, 3, 1]) == [1, 4, 6, 4, 1]
 
-def test_crea_triangulo_tartaglia():
+def test_crea_triangulo_tartaglia() -> None:
     assert crea_triangulo_tartaglia(1) == [[1]]
     assert crea_triangulo_tartaglia(2) == [[1], [1, 1]]
     assert crea_triangulo_tartaglia(3) == [[1], [1, 1], [1, 2, 1]]
     assert crea_triangulo_tartaglia(4) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
     assert crea_triangulo_tartaglia(5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 
-def test_coeficiente_binomial():
+def test_coeficiente_binomial() -> None:
     assert coeficiente_binomial(1, 0) == 1
     assert coeficiente_binomial(2, 1) == 2
     assert coeficiente_binomial(4, 2) == 6

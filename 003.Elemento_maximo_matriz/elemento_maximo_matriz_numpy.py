@@ -21,9 +21,8 @@ def buscar_maximo_y_posicion(matriz: list[list[int]]) -> dict[str, Any]:
             'posicion': posicion_maximo}
 
 
-def _valor_maximo(matriz: list[list[int]]) -> int:
-    maximo: int
-    arr_matriz: ndarray
+def _valor_maximo(matriz: list[list[int]]) -> Any:
+
     arr_matriz = np.array(matriz)
     maximo = np.max(arr_matriz)
     return maximo
@@ -31,7 +30,6 @@ def _valor_maximo(matriz: list[list[int]]) -> int:
 
 def _posicion_valor_maximo(matriz: list[list[int]], maximo: int) -> tuple[int, int]:
     posicion: tuple[int, int]
-    arr_matriz: ndarray
 
     arr_matriz = np.array(matriz)
     arr_posicion = np.where(arr_matriz == maximo)
