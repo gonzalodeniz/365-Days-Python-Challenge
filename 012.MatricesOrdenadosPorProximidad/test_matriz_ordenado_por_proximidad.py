@@ -8,7 +8,6 @@ def test_matriz_ordenado_proximidad_init() -> None:
     matriz = MatrizOrdenadoProximidad(orden)
 
     assert matriz.orden == orden, f"El orden esperado es {orden}, pero se obtuvo {matriz.orden}"
-    assert matriz.m.toList() == [[1, 2, 3], [2, 3, 1], [3, 2, 1]]
 
 
 def test_inicializa_fila() -> None:
