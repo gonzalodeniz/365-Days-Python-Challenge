@@ -37,12 +37,12 @@ def calcula_numero_romano(roman: str) -> int:
     valor = 0
     signo = 0
     resultado = 0
-    if not valida_numero_romano(roman):
+    if not valida_numero_romano(numero_romano):
         raise ValueError(f"Número romano no válido: {numero_romano}")
 
-    for i in range(len(roman)):
-        valor = calcula_valor_digito(roman[i])
-        signo = calcula_signo_digito(roman, i)
+    for i in range(len(numero_romano)):
+        valor = calcula_valor_digito(numero_romano[i])
+        signo = calcula_signo_digito(numero_romano, i)
         resultado += valor * signo
 
     return resultado
@@ -78,8 +78,16 @@ def get(cadena: str, posicion: int) -> Optional[str]:
 
 
 def valida_numero_romano(roman: str) -> bool:
-    return validar_regla_1(roman) and validar_regla_2(roman) and validar_regla_3(roman) and validar_regla_4(roman)
+    return validar_digitos(roman) and validar_regla_1(roman) and validar_regla_2(roman) and validar_regla_3(roman) \
+        and validar_regla_4(roman)
 
+
+def validar_digitos(roman: str) -> bool:
+    """ Comprueba que todos los dígitos romanos son los correctos"""
+    for digito in roman:
+        if digito not in VALOR_ROMANO.keys():
+            return False
+    return True
 
 def validar_regla_1(roman: str) -> bool:
     """ Los símbolos I, X, C y M se pueden repetir hasta tres veces. """
@@ -123,8 +131,11 @@ def validar_regla_4(roman: str) -> bool:
 
 
 def main() -> None:
-    numero = calcula_numero_romano("MCMXCII")
-    print(numero)
+    try:
+        numero = calcula_numero_romano("MCctccM")
+        print(numero)
+    except ValueError as e:
+        print(e)
 
 
 if __name__ == "__main__":
